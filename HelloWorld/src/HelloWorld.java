@@ -2,18 +2,28 @@ import javax.swing.JOptionPane;
 
 public class HelloWorld {
 
-    public static void main(String[] args) {
-        System.out.println("Hello, World");
-        int intC = 15;
+    public static void main(String[] args) 
+    {
+    	
+    	String name;
+    	int nameLength;
+    	
+    	name = JOptionPane.showInputDialog("What is your name? ");
+        nameLength = name.length();
+        System.out.println(name);
+
         String strOut = "";
-        while(intC>0){
+        while(nameLength>0)
+        {
         	strOut = "";
-        	for(int i=0;i<intC;i++){
+        	for(int i=0;i<nameLength;i++)
         		strOut = strOut + "*";
-        	}
+        	
         	System.out.println(strOut);        	
-        	intC--;
+        	nameLength--;
         }
+        System.out.println(name);
+     
     }
 
 }
